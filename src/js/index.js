@@ -9,7 +9,6 @@ import "../scss/main.scss";
 const durationInput = document.querySelector(".duration");
 const startBtn = document.querySelector(".btn-start");
 const pauseBtn = document.querySelector(".btn-pause");
-let tic = 0;
 class Timer {
   constructor(durationInput, startBtn, pauseBtn) {
     this.durationInput = durationInput;
@@ -23,6 +22,13 @@ class Timer {
   start = () => {
     this.tick();
     this.interval = setInterval(this.tick, 1000);
+  };
+
+  pause = () => {
+    clearInterval(this.interval);
+  };
+  tick = () => {
+    console.log(`tick`);
   };
 }
 
