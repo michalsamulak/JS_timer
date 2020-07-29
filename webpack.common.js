@@ -20,6 +20,12 @@ module.exports = {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env"],
+//plugin for class prop =()=>
+            plugins: 
+              [
+                "@babel/plugin-proposal-class-properties"
+              ],
+          
           },
         },
       },
@@ -62,6 +68,7 @@ module.exports = {
   },
 
   plugins: [
+    
     new CopyWebpackPlugin({
       patterns: [
         {
