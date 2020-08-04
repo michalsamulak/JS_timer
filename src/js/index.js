@@ -1,4 +1,5 @@
 import "../scss/main.scss";
+import Timer from "./Timer";
 
 // uncomment the lines below to enable PWA
 // import {registerSW} from './pwa.js';
@@ -9,35 +10,15 @@ import "../scss/main.scss";
 const durationInput = document.querySelector(".duration");
 const startBtn = document.querySelector(".btn-start");
 const pauseBtn = document.querySelector(".btn-pause");
-class Timer {
-  constructor(durationInput, startBtn, pauseBtn) {
-    this.durationInput = durationInput;
-    this.startBtn = startBtn;
-    this.pauseBtn = pauseBtn;
+const timer = new Timer(durationInput, startBtn, pauseBtn, {
+  onStart() {
+    console.log('Timer started');
+  },
 
-    this.startBtn.addEventListener("click", this.start);
-    this.pauseBtn.addEventListener("click", this.pause);
+  onTick() {
+    console.log('Timer ticked');
+  },
+  onComplete() {
+    console.log('Timer finish');
   }
-
-  start = () => {
-    this.tick();
-    this.interval = setInterval(this.tick, 1000);
-  };
-
-  pause = () => {
-    clearInterval(this.interval);
-  };
-  tick = () => {
-    this.timeRemaining = this.timeRemaining - 1;
-  };
-
-  get timeRemaining() {
-    return parseFloat(this.durationInput.value);
-  }
-
-  set timeRemaining(time) {
-    this.durationInput.value = time;
-  }
-}
-
-const timer = new Timer(durationInput, startBtn, pauseBtn);
+});
