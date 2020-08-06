@@ -146,7 +146,18 @@
   </head>
   <body>
     <main>
-      <input type="number" class="duration" value="30"/>
+      <svg height="400" width="400">
+        <circle class="clock_circle"
+          r="190"
+          cx="200"
+          cy="200"
+          fill="transparent"
+          stroke="blue"
+          stroke-width="15"
+          transform="rotate(-90 200 200)"
+        />
+      </svg>
+      <input type="number" class="duration" value="30" />
       <button class="btn-start">Start</button>
       <button class="btn-pause">Pause</button>
     </main>
