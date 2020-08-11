@@ -7,10 +7,10 @@ import Timer from "./Timer";
 
 /* place your code below */
 
-const durationInput = document.querySelector(".duration");
-const startBtn = document.querySelector(".btn-start");
-const pauseBtn = document.querySelector(".btn-pause");
-const cirlce = document.querySelector(".clock_circle");
+const durationInput = document.querySelector(".clock__duration");
+const startBtn = document.querySelector(".clock__btn-start");
+const pauseBtn = document.querySelector(".clock__btn-pause");
+const cirlce = document.querySelector(".clock_dial--circle");
 
 const perimeter = cirlce.getAttribute('r') * 2 * Math.PI;
 cirlce.setAttribute('stroke-dasharray', perimeter);

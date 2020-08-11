@@ -2,6 +2,7 @@
 
 @import "_variables";
 @import "modules/hello.scss";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css);
 
 body {
   background: $wtf;
@@ -12,3 +13,55 @@ body {
   min-height: 100vh;
 }
 
+.clock {
+  position: relative;
+  display: inline-block;
+
+  &__dial {
+    height: 400px;
+    width: 400px;
+  }
+
+  &__duration {
+    display: block;
+  border: none;
+  width: 140px;
+  font-size: 50px;
+  text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    border: none;
+  font-size: 36px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+  }
+
+  &__controls {
+    position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+
+ 
+  }
+}
+
+.fas {
+  color: orangered;
+ 
+}

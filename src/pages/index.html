@@ -145,21 +145,24 @@
     />
   </head>
   <body>
-    <main>
-      <svg height="400" width="400">
-        <circle class="clock_circle"
+    <main class="clock">
+      <svg class="clock__dial" height="400" width="400">
+        <circle
+          class="clock_dial--circle"
           r="190"
-          cx="200"
+          cx="0"
           cy="200"
           fill="transparent"
-          stroke="blue"
+          stroke="orangered"
           stroke-width="15"
-          transform="rotate(-90 200 200)"
+          transform="rotate(-90 100 100)"
         />
       </svg>
-      <input type="number" class="duration" value="30" />
-      <button class="btn-start">Start</button>
-      <button class="btn-pause">Pause</button>
+      <div class="clock__controls">
+        <input type="number" class="clock__duration" value="3" />
+        <button class="clock__btn clock__btn-start"><i class="fas fa-play"></i></button>
+        <button class="clock__btn clock__btn-pause"><i class="fas fa-pause"></i></button>
+      </div>
     </main>
   </body>
 </html>
